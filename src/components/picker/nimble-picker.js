@@ -551,17 +551,6 @@ export default class NimblePicker extends React.PureComponent {
         aria-label={title}
         onKeyDown={this.handleKeyDown}
       >
-        <div className="emoji-mart-bar">
-          <Anchors
-            ref={this.setAnchorsRef}
-            data={this.data}
-            i18n={this.i18n}
-            color={color}
-            categories={this.categories}
-            onAnchorClick={this.handleAnchorClick}
-            icons={this.icons}
-          />
-        </div>
 
         <Search
           ref={this.setSearchRef}
@@ -574,6 +563,18 @@ export default class NimblePicker extends React.PureComponent {
           custom={this.CUSTOM}
           autoFocus={autoFocus}
         />
+
+        <div className="emoji-mart-bar">
+          <Anchors
+            ref={this.setAnchorsRef}
+            data={this.data}
+            i18n={this.i18n}
+            color={color}
+            categories={this.categories}
+            onAnchorClick={this.handleAnchorClick}
+            icons={this.icons}
+          />
+        </div>
 
         <div
           ref={this.setScrollRef}
